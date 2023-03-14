@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Landing from './pages/landing';
+import Compare from './pages/compare';
+import Timeline from './pages/timeline';
+import {Route, Routes} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/navbar';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Navbar />
+    <Routes>
+      <Route path='/' element={<Landing/> }/>
+      <Route path='/time' element={<Timeline/> }/>
+      <Route path='/compare' element={<Compare/> }/>
+    </Routes>
+    <Footer/>
     </div>
   );
 }

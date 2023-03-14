@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  background-color: black;
 }
 
 .App-logo {
@@ -14,14 +14,13 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: blue;
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: balck;
 }
 
 .App-link {
@@ -35,4 +34,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.About{
+  background-color: whitesmoke;
+  width: 900px;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 50px;
+  
+}
+
+h1{
+  text-align: center;
 }
