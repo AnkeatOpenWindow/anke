@@ -1,5 +1,5 @@
 .App {
-  background-color: black;
+  background-color: grey;
 }
 
 .App-logo {
@@ -46,6 +46,22 @@
   
 }
 
-h1{
+h1,h2{
   text-align: center;
+  color: white;
+}
+
+h3{
+  text-align: center;
+  color: white;
+  background-color: gray;
+}
+
+#myId{
+  text-align: center;
+  color: white;
+  background-color: gray;
+  width: 300px;
+  margin-top: 15px;
+  margin-left: 370px;
 }

@@ -1,31 +1,24 @@
-import React, {useState, useEffect, useRef} from 'react'
-import {Chart as ChartJS, LineElement, PointElement ,CategoryScale, LinearScale} from 'chart.js'
-import { Line } from 'react-chartjs-2'
+import React, {useState, useEffect} from 'react'
+import {Chart as ChartJS, BarElement, CategoryScale, LinearScale} from 'chart.js'
+import { Bar } from 'react-chartjs-2'
 import axios from 'axios'
-
 
 ChartJS.register(
     CategoryScale,
     LinearScale,
-    LineElement,
-    PointElement
+    BarElement
 )
 
-const LineChart = () => {
+const BarChart = () => {
     const [chart, SetChart] = useState ()
     const [labels, setLabels] = useState([])
     const [date, setDate] = useState([])
-    
-    // const selectRef= useRef("");
-    const [inputValue, setInputValue] = useState("avg");
+
 
     var baseURL = "https://api.themoviedb.org/3/discover/movie?/?limite=10"
     var proxyURL = 'https://cors-anywhere.herokuapp.com/'
     var apiKey = "3279c904afffb32c9958ddb64fb776fa&with_genres=27"
     
-    useEffect(() =>{
-      console.log(inputValue);
-    },[inputValue])
 
     useEffect(()=>{
       let query = "movie";
@@ -51,24 +44,18 @@ const LineChart = () => {
 
         axios.get('https://api.themoviedb.org/3/discover/'+query+'?api_key=' +apiKey+ '&with_genres=27')
         .then((response) => {
-          console.log(response.data);
-          const movieLabels = response.data.results.map(({original_title}) => original_title)
-          let releaseDate = [];
-          if (inputValue == "avg"){
-             releaseDate = response.data.results.map(({vote_average}) => vote_average)
-          } 
-          else if (inputValue == "count"){
-            releaseDate = response.data.results.map(({vote_count}) => vote_count)
-          }
-          console.log(releaseDate);
-          setLabels(movieLabels)
-          setDate(releaseDate)
-      })
-      .catch((err) => {
-          console.log(err);
-      })
+            console.log(response.data);
+            const movieLabels = response.data.results.map(({original_title}) => original_title)
+            const releaseDate = response.data.results.map(({vote_average}) => vote_average)
+            console.log(releaseDate);
+            setLabels(movieLabels)
+            setDate(releaseDate)
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 
-    },[inputValue])
+    },[])
 
     var data = {
         labels: labels,
@@ -89,35 +76,18 @@ const LineChart = () => {
         maintianAspectRatio: false,
         scales: {
           y: {
-            // beginAtZero: true,
-            ticks: {
-              min: 0,
-              max: 10,
-              stepSize: 0.2,
-              // callback: (value, index, values) => {
-              //   // console.log(value, values);
-              //   return value;
-              // },
-            }
+            beginAtZero: true
           }
         },
         legend:{
             lables:{
                 fontSize: 26
             }
-        },
-        interaction: {
-          mode: 'point'
-      }
+        }
     }
   return (
     <div>
-        <select name="myName" id="myId" onChange={(e) => setInputValue(e.target.value)}>
-          <option value="avg">Average vote</option>
-          <option value="count">Vote count</option>
-        </select>
-
-        <Line
+        <Bar
             data= {data}
             options= {options}
         />
@@ -125,4 +95,4 @@ const LineChart = () => {
   )
 }
 
-export default LineChart
+export default BarChart

@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,7 @@ function App() {
       <Route path='/time' element={<Timeline/> }/>
       <Route path='/compare' element={<Compare/> }/>
     </Routes>
-    <Footer/>
+     <Footer/>
     </div>
   );
 }
