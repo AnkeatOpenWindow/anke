@@ -32,6 +32,9 @@ Shows data that is retrieved from an API and showcases it on the three pages in 
 Creating a website that shows data about movies that are pulled from a API.
 ## Wireframer
 <!-- Images-->
+<img src="src/images/Homepage.jpg" width="100">
+<img src="src/images/Comparaion_page.jpg" width="100">
+<img src="src/images/Timeline_page.jpg" width="100">
 
 # Development Process
 ## Implementation Process
@@ -46,9 +49,18 @@ When I coded my timeline chart onto onto my timeline page the line chart didn't 
 # Final Outcome
 ## Mockups
 <!-- Images-->
+<img src="src/images/Landing1.jpg" width="100">
+<img src="src/images/Landing2.jpg" width="100">
+<img src="src/images/Landing3.jpg" width="100">
+<img src="src/images/Compare1.jpg" width="100">
+<img src="src/images/Compare2.jpg" width="100">
+<img src="src/images/Comapare3.jpg" width="100">
+<img src="src/images/Timeline1.jpg" width="100">
+<img src="src/images/Timeline2.jpg" width="100">
 
 ## Video Demonstration
 <!-- Video-->
+
 
 # Conculsion
 Taking all of the things i have learned about react, axios, react bootstrap and Chrart.js i have created a website that shows data on charts.
