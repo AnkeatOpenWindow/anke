@@ -10,10 +10,7 @@ import { Radar } from "react-chartjs-2";
 
 
 function Compare(){
-
-    
     return(
-
         <div className="App">
              <h1>Compare</h1>
             <Card style={{ width: '80%', margin: '10%', paddingTop: '20'}}> 
@@ -28,12 +25,8 @@ function Compare(){
                     <div style={{width: 700, marginLeft: 150, marginBottom:10  }}>
                         <PieChart/>
                     </div>
-
             </Card>
-    </div>
-        
-        
-        
+    </div> 
     )
 }
 export default Compare;

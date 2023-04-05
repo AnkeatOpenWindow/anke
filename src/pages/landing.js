@@ -29,7 +29,6 @@ function Landing() {
             </div>
 
             <Card className="bg-dark text-white" style={{ marginBottom: 10 }}>
-
                 <Row style={{ marginBottom: 20, }}>
                     <Col>
                         <Card.Title className="text-center mt-5"><h1>About</h1></Card.Title>
@@ -49,11 +48,9 @@ function Landing() {
                                 <BarChart/>
                             </div>
                         </Card>
-                       
                     </Col>
                 </Row>
             </Card>
-
         </div>
     );
 }

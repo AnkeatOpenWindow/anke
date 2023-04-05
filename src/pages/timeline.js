@@ -10,14 +10,11 @@ function Timeline(){
         <div className="App">
             <h1>Timeline</h1>
             <Card style={{ width: '80%', margin: '10%', paddingTop: '20'}}>
-                
                 <div style={{width:'900', height:'900'}}>
                     <LineChart/>
                 </div>
             </Card>
         </div>
-        
-        
     )
 }
 export default Timeline;
