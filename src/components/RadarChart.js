@@ -1,16 +1,14 @@
 import React, {useState, useEffect} from 'react'
-import {Chart as ChartJS, BarElement, CategoryScale, LinearScale} from 'chart.js'
-import { Bar } from 'react-chartjs-2'
+import {Chart as ChartJS, LineElement, PointElement, Tooltip, Legend, RadialLinearScale} from 'chart.js'
+import { Radar } from 'react-chartjs-2'
 import axios from 'axios'
 
 
 ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement
+    LineElement, PointElement, Tooltip, Legend, RadialLinearScale
 )
 
-const BarChart = () => {
+const RadarChart = () => {
     const [chart, SetChart] = useState ()
     const [labels, setLabels] = useState([])
     const [date, setDate] = useState([])
@@ -47,7 +45,7 @@ const BarChart = () => {
         .then((response) => {
             console.log(response.data);
             const movieLabels = response.data.results.map(({original_title}) => original_title)
-            const releaseDate = response.data.results.map(({vote_average}) => vote_average)
+            const releaseDate = response.data.results.map(({popularity}) => popularity)
             console.log(releaseDate);
             setLabels(movieLabels)
             setDate(releaseDate)
@@ -61,53 +59,33 @@ const BarChart = () => {
     var data = {
         labels: labels,
         datasets: [{
-          label: 'Average vote',
+            label: 'Popularity',
           data: date,
           backgroundColor: [
-            'rgba(255,0,0)',
-              'rgba(0,255,0)',
-              'rgba(0,0,255)',
-              'rgba(255,255,0)',
-              'rgba(0,255,255)',
-              'rgba(255,0,255)',
-              'rgba(192,192,192)',
-              'rgba(128,128,128)',
-              'rgba(128,128,0)',
-              'rgba(0,128,0)',
-  
-              'rgba(128,0,128)',
-              'rgba(0,128,128)',
-              'rgba(0,0,128)',
-              'rgba(128,0,0)',
-              'rgba(0,250,154)',
-              'rgba(224,255,255)',
-              'rgba(100,149,237)',
-              'rgba(65,105,225)',
-              'rgba(139,0,139)',
-              'rgba(188,143,143)',
+            'rgba(173, 216, 230)'
           ],
-          borderColor: [
-              'rgba(255,0,0)',
-              'rgba(0,255,0)',
-              'rgba(0,0,255)',
-              'rgba(255,255,0)',
-              'rgba(0,255,255)',
-              'rgba(255,0,255)',
-              'rgba(192,192,192)',
-              'rgba(128,128,128)',
-              'rgba(128,128,0)',
-              'rgba(0,128,0)',
-  
-              'rgba(128,0,128)',
-              'rgba(0,128,128)',
-              'rgba(0,0,128)',
-              'rgba(128,0,0)',
-              'rgba(0,250,154)',
-              'rgba(224,255,255)',
-              'rgba(100,149,237)',
-              'rgba(65,105,225)',
-              'rgba(139,0,139)',
-              'rgba(188,143,143)',
+          backgroundColor: [
+            'rgba(255,0,0)',
+            'rgba(0,255,0)',
+            'rgba(0,0,255)',
+            'rgba(255,255,0)',
+            'rgba(0,255,255)',
+            'rgba(255,0,255)',
+            'rgba(192,192,192)',
+            'rgba(128,128,128)',
+            'rgba(128,128,0)',
+            'rgba(0,128,0)',
+
+            'rgba(128,0,128)',
+            'rgba(0,128,128)',
+            'rgba(0,0,128)',
+            'rgba(128,0,0)',
+            'rgba(0,250,154)',
+            'rgba(224,255,255)',
+            'rgba(100,149,237)',
+            'rgba(65,105,225)',
+            'rgba(139,0,139)',
+            'rgba(188,143,143)',
           ],
           borderWidth: 1
         }]
@@ -128,7 +106,7 @@ const BarChart = () => {
     }
   return (
     <div>
-        <Bar
+        <Radar
             data= {data}
             options= {options}
         />
@@ -136,4 +114,4 @@ const BarChart = () => {
   )
 }
 
-export default BarChart
+export default RadarChart

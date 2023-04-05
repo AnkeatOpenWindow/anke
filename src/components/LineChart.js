@@ -73,7 +73,7 @@ const LineChart = () => {
     var data = {
         labels: labels,
         datasets: [{
-          label: 'Average vote',
+          label: 'Average vote and Vote count',
           data: date,
           backgroundColor: [
             'rgba(173, 216, 230)'
