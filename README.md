@@ -32,20 +32,23 @@ Shows data that is retrieved from an API and showcases it on the three pages in 
 Creating a website that shows data about movies that are pulled from a API.
 ## Wireframer
 <!-- Images-->
-## Custom UI
-<!-- Images-->
 
 # Development Process
 ## Implementation Process
-### Highlights
-### Challenges
+Using React app i created a react aplication on which the website will be displayed on. I created three pages namely Landing page, Comapre page and Timeline page. The Landing page holds an about secontion as well a bar chart that i used Chart.js to show date from my API. My compare page has three charts namely a bar chart, radar chart and a pie chart. All three these charts shows diffrent data that can be found on my API. On my timeline page i have a line chart that. The line chart can change to display another set of data on the chart.
 
-# Further Implimentation
+### Highlights
+Learning how to create a chart using Chart.js, axios and react bootstrap. Then leaening to pull data from a API to show the data on the same charts that was previously made.
+
+### Challenges
+When I coded my timeline chart onto onto my timeline page the line chart didn't show all the data. I tried to recode a bar chart on the landing page and the same thing happened. However when i went to code my compare page all the charts were showing the data and working properly.
 
 # Final Outcome
 ## Mockups
 <!-- Images-->
+
 ## Video Demonstration
 <!-- Video-->
 
 # Conculsion
+Taking all of the things i have learned about react, axios, react bootstrap and Chrart.js i have created a website that shows data on charts.

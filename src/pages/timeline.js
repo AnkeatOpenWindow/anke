@@ -8,7 +8,7 @@ import LineChart from "../components/LineChart";
 function Timeline(){
        return(
         <div className="App">
-            <h1>Time Line</h1>
+            <h1>Timeline</h1>
             <Card style={{ width: '80%', margin: '10%', paddingTop: '20'}}>
                 
                 <div style={{width:'900', height:'900'}}>
