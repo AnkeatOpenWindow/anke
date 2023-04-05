@@ -58,9 +58,7 @@ When I coded my timeline chart onto onto my timeline page the line chart didn't 
 <img src="src/images/Timeline1.jpg" width="100">
 <img src="src/images/Timeline2.jpg" width="100">
 
-## Video Demonstration
-<!-- Video-->
-
+<!-- Demo video is in the folder named demo_video-->
 
 # Conculsion
 Taking all of the things i have learned about react, axios, react bootstrap and Chrart.js i have created a website that shows data on charts.
