@@ -21,8 +21,10 @@ world data driven web application, using an API of your choice!
 * Chart.js
 
 ## How to install
-In the project directory, you can run:
-### `npm start`
+1. Clone repository.
+2. Open Termianl and cd into anke
+3. Type in npm i then enter
+4. Once all the packages have been installed type in npm start
 
 # Features and Functionality
 Shows data that is retrieved from an API and showcases it on the three pages in the form of charts.
@@ -58,7 +60,8 @@ When I coded my timeline chart onto onto my timeline page the line chart didn't 
 <img src="src/images/Timeline1.jpg" width="100">
 <img src="src/images/Timeline2.jpg" width="100">
 
-<!-- Demo video is in the folder named demo_video-->
+## Mockups
+[https://drive.google.com/open?id=1O6IY3mGNtq_1-y5VjAyzqsLOV-1b6TfH&usp=drive_fs](https://drive.google.com/file/d/1O6IY3mGNtq_1-y5VjAyzqsLOV-1b6TfH/view?usp=sharing)
 
 # Conculsion
 Taking all of the things i have learned about react, axios, react bootstrap and Chrart.js i have created a website that shows data on charts.
