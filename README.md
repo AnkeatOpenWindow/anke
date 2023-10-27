@@ -60,7 +60,7 @@ When I coded my timeline chart onto onto my timeline page the line chart didn't 
 <img src="src/images/Timeline1.jpg" width="100">
 <img src="src/images/Timeline2.jpg" width="100">
 
-## Mockups
+## Demo video
 [https://drive.google.com/open?id=1O6IY3mGNtq_1-y5VjAyzqsLOV-1b6TfH&usp=drive_fs](https://drive.google.com/file/d/1O6IY3mGNtq_1-y5VjAyzqsLOV-1b6TfH/view?usp=sharing)
 
 # Conculsion
